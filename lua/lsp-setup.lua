@@ -83,7 +83,8 @@ local servers = {
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
   terraformls = {},
   tflint = {},
-
+  gopls = {
+  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
