@@ -17,6 +17,7 @@
   "gopher.nvim": { "branch": "main", "commit": "ac27f4b6794c872140fb205313d79ab166892fe9" },
   "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "indent-blankline.nvim": { "branch": "master", "commit": "12e92044d313c54c438bd786d11684c88f6f78cd" },
+  "inlay-hints.nvim": { "branch": "main", "commit": "006b0898f5d3874e8e528352103733142e705834" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lualine.nvim": { "branch": "master", "commit": "566b7036f717f3d676362742630518a47f132fff" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "0989bdf4fdf7b5aa4c74131d7ffccc3f399ac788" },

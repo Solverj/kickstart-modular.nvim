@@ -1,6 +1,7 @@
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
+  vim.lsp.inlay_hint.enable(bufnr, true)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
   -- to define small helper and utility functions so you don't have to repeat yourself
   -- many times.
@@ -84,23 +85,30 @@ local servers = {
   terraformls = {},
   tflint = {},
   gopls = {
-    settings = {
-      gopls = {
-        analyses = {
-          unusedparams = true,
-          shadow = true,
-
-        },
-        staticcheck = true,
-        gofumpt = true,
-        stubmethods = true,
+    gopls = {
+      hints = {
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        constantValues = true,
+        functionTypeParameters = true,
+        parameterNames = true,
+        rangeVariableTypes = true,
       },
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+
+      },
+      staticcheck = true,
+      gofumpt = true,
     },
   },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
+      hint = { enable = true },
       -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
       -- diagnostics = { disable = { 'missing-fields' } },
     },
@@ -120,7 +128,6 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
-
 mason_lspconfig.setup_handlers {
   function(server_name)
     require('lspconfig')[server_name].setup {

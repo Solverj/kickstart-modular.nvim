@@ -12,4 +12,11 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
+  keys = {
+    {
+      "<leader>cg",
+      "<cmd>ChatGPT<CR>",
+      "ChatGPT 3.5 Turbo start",
+    },
+  }
 }
