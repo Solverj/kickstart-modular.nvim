@@ -98,7 +98,6 @@ local servers = {
       analyses = {
         unusedparams = true,
         shadow = true,
-
       },
       staticcheck = true,
       gofumpt = true,
