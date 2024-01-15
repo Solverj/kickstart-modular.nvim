@@ -1,7 +1,7 @@
 return {
   "ThePrimeagen/refactoring.nvim",
   config = function()
-    require("refactoring").setup({})
+    require("refactoring").setup()
     vim.api.nvim_set_keymap(
       "v",
       "<leader>rr",
