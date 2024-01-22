@@ -86,7 +86,8 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-  terraformls = {},
+  terraformls = {
+  },
   tflint = {},
   gopls = {
     gopls = {
